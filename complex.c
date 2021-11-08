@@ -18,6 +18,11 @@ void ComplexDelete(Complex z){
     free(z);
 }
 
+void ComplexSet(Complex dest, Complex src){
+    dest->real = src->real;
+    dest->imaginary = src->imaginary;
+}
+
 double Re(Complex z){
     return z->real;
 }

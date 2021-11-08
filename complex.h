@@ -5,6 +5,7 @@ typedef struct complex* Complex;
 
 Complex ComplexCreate(double real, double imaginary);
 void ComplexDelete(Complex z);
+void ComplexSet(Complex dest, Complex src);
 double Re(Complex z);
 double Im(Complex z);
 Complex ComplexAdd(Complex z1, Complex z2);
