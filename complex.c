@@ -4,6 +4,11 @@
 #include <stdio.h>
 
 
+Complex CreateComplex(int real, int imaginary){
+    Complex a = {real, imaginary};
+    return a;
+}
+
 int Re(Complex* z){
     return z->real;
 }

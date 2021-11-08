@@ -4,6 +4,7 @@ typedef struct Complex{
     int real;
     int imaginary;
 } Complex;
+Complex CreateComplex(int real, int imaginary);
 int Re(Complex* z);
 int Im(Complex* z);
 Complex ComplexAdd(Complex* z1, Complex* z2);
