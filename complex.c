@@ -4,11 +4,11 @@
 #include <stdio.h>
 
 struct complex{
-    int real;
-    int imaginary;
+    double real;
+    double imaginary;
 };
 
-Complex ComplexCreate(int real, int imaginary){
+Complex ComplexCreate(double real, double imaginary){
     Complex a = malloc(sizeof(struct complex));
     a->real = real;
     a->imaginary = imaginary;
@@ -18,11 +18,11 @@ void ComplexDelete(Complex z){
     free(z);
 }
 
-int Re(Complex z){
+double Re(Complex z){
     return z->real;
 }
 
-int Im(Complex z){
+double Im(Complex z){
     return z->imaginary;
 }
 
@@ -34,7 +34,7 @@ Complex ComplexMul(Complex z1, Complex z2){ // (a + ib) * (c + id) = ac +iad + i
     return CreateComplex(Re(z1)*Re(z2) - Im(z1)*Im(z2),Re(z1)*Im(z2) + Im(z1)*Re(z2));
 }
 
-int ComplexAbs(Complex z){
+double ComplexAbs(Complex z){
     return sqrt( pow(Re(z),2) + pow(Im(z),2) );
 }
 
